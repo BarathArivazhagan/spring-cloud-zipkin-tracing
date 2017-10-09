@@ -1,18 +1,18 @@
 package com.barath.app;
 
+import java.lang.invoke.MethodHandles;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.barath.app.logger.AMCLogger;
-import com.barath.app.logger.AMCLoggerFactory;
 
 @RestController
 public class AppController {
 	
-	private static final AMCLogger logger=AMCLoggerFactory.getLogger();
+	private static final Logger logger=LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	
 	@Autowired
 	private ZipkinClient client;
@@ -25,7 +25,7 @@ public class AppController {
 	
 	@GetMapping(value="/client")
 	public String clientHome(){
-		logger.info("Welcome Home from Client 2 is called ");
+		logger.info("Invoke Client 1 from Client 2 is called ");
 		return client.home();
 	}
 

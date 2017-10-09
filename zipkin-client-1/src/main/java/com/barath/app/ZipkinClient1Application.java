@@ -1,14 +1,15 @@
 package com.barath.app;
 
+import java.lang.invoke.MethodHandles;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.barath.app.logger.AMCLogger;
-import com.barath.app.logger.AMCLoggerFactory;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -20,10 +21,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableFeignClients
 public class ZipkinClient1Application {
 	
-	private static final AMCLogger logger=AMCLoggerFactory.getLogger();
+	private static final Logger logger=LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	public static void main(String[] args) {
-		logger.info("INFORMATION IS WEALTH  ======>");
+		
 		SpringApplication.run(ZipkinClient1Application.class, args);
 	}
 	@Bean
