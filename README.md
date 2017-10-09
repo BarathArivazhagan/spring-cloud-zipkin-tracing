@@ -1,17 +1,17 @@
 # spring-cloud-zipkin-tracing
 This project contains samples demonstrating the microservices tracing using zipkin 
 
-# ZIPKIN -Distributed Tracing system to trace the request across services in microservices architecture.
+### ZIPKIN -Distributed Tracing system to trace the request across services in microservices architecture.
 
 
 
-# ZIPKIN UI: 
+### ZIPKIN UI: 
 
 Navigate to http://localhost:9411
 
-[ZIPKIN UI ](https://github.com/BarathArivazhagan/spring-cloud-zipkin-tracing/images/zipkin-ui.png)
+![ZIPKIN UI ](https://github.com/BarathArivazhagan/spring-cloud-zipkin-tracing/images/zipkin-ui.png)
 
-# Projects : 
+### Projects : 
 
 <table>
 
