@@ -9,7 +9,7 @@ This project contains samples demonstrating the microservices tracing using zipk
 
 Navigate to http://localhost:9411 to view Zipkin UI.
 
-![Zipkin UI ](images/zipkin-ui.png)
+![Zipkin UI ](images/zipkin-ui.PNG)
 
 <table>
 
