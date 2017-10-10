@@ -22,7 +22,7 @@ Navigate to http://localhost:9411 to view Zipkin UI.
   <tr>
     <td><a href="https://github.com/BarathArivazhagan/spring-cloud-zipkin-tracing/tree/master/zipkin-ui-server"> zipkin-ui-server</a></td>
     <td>9411</td>
-    <td>Eureka server - service registration server</td>
+    <td>Zipkin UI server</td>
   </tr>
   <tr>
     <td><a href="https://github.com/BarathArivazhagan/spring-cloud-zipkin-tracing/tree/master/zipkin-client-1">zipkin-client-1</a></td>
