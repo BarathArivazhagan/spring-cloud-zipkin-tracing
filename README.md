@@ -1,5 +1,13 @@
-# spring-cloud-sidecar-sample
+# spring-cloud-zipkin-tracing
 This project contains samples demonstrating the microservices tracing using zipkin.
+
+## Spring Cloud Sleuth automatically instruments common communication channels:
+
+* Requests over messaging technologies like Apache Kafka or RabbitMQ (or any other Spring Cloud Stream binder
+* HTTP headers received at Spring MVC controllers
+* Requests that pass through a Netflix Zuul microproxy
+* Requests made with the RestTemplate, etc.
+
 
 ### ZIPKIN 
 
