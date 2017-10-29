@@ -1,0 +1,24 @@
+version: '3'
+services:
+  zipkin-server:
+    build: ./zipkin-ui-server
+    ports:
+      - "9411:9411"
+  client-1:
+    build: ./zipkin-client-1
+    ports:
+      - "8081:8081"
+    links: 
+      - zipkin-server
+    environment:
+      SPRING_ZIPKIN_BASE-URL: http://zipkin-server:9411
+      MICROSERVICE_CLIENT_URL: http://client-2:8081
+  client-2:
+    build: ./zipkin-client-2
+    ports:
+      - "8082:8082"
+    links: 
+      - zipkin-server
+    environment:
+      SPRING_ZIPKIN_BASE-URL: http://zipkin-server:9411
+      MICROSERVICE_CLIENT_URL: http://client-1:8081
