@@ -29,4 +29,9 @@ public class AppController {
 		return client.home();
 	}
 
+	@GetMapping(value = "/rest/client2")
+	public String client2REST(){
+
+	}
+
 }
