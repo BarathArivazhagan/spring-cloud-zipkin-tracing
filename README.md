@@ -73,23 +73,20 @@ Navigate to http://localhost:9411 to view Zipkin UI.
 
 ## Zipkin Output: 
 
-#### Client 1 Logs 
-
-: 
-
+#### Client 1 Logs
 ```
 2017-10-29 20:26:37.497  INFO [zipkin-client-1,9866ef627387f89d,9866ef627387f89d,true] 5025 --- [nio-8081-exec-8] com.barath.app.AppController             : Invoke Client 1 
 ```
 
-#### Client 1 Logs 
+#### Client 2 Logs 
+
 ```
 2017-10-29 20:26:37.521  INFO [zipkin-client-2,9866ef627387f89d,353315ba5919a55d,true] 5029 --- [io-8082-exec-10] com.barath.app.AppController             : Welcome Home from Client 2 is called 
-
 ```
 
 #### In zipkin UI : 
 
-![Zipkin OUTPUT UI ](images/output.PNG)
+![Zipkin OUTPUT UI ](images/output.png)
 
 ## How to rebuild the project after the changes? 
 
