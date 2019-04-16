@@ -1,19 +1,21 @@
 # spring-cloud-zipkin-tracing
 This project contains samples demonstrating the microservices tracing using zipkin.
 
-## Spring Cloud Sleuth automatically instruments common communication channels:
+## spring cloud sleuth 
 
-* Requests over messaging technologies like Apache Kafka or RabbitMQ (or any other Spring Cloud Stream binder
+spring cloud sleuth automatically instruments common communication channels:
+
+* Requests over messaging technologies like Apache Kafka or RabbitMQ (or any other spring cloud stream binder)
 * HTTP headers received at Spring MVC controllers
 * Requests that pass through a Netflix Zuul microproxy
 * Requests made with the RestTemplate, etc.
 
 
-### ZIPKIN 
+### zipkin
 
 <i>Distributed Tracing system to trace the request across services in microservices architecture.</i>
 
-### ZIPKIN UI
+###  zipkin ui
 
 Navigate to http://localhost:9411 to view Zipkin UI.
 
@@ -49,19 +51,18 @@ Navigate to http://localhost:9411 to view Zipkin UI.
 
 ## How to build and run ?
 
- * Download/Clone the repository : 
+- Download/Clone the repository : 
    
-   ```
-   ./mvnw clean install
+ ```
+ $ git clone https://github.com/BarathArivazhagan/spring-cloud-zipkin-tracing && cd spring-cloud-zipkin-tracing
+ $ ./mvnw clean install
+ ```
 
-   ```
+- To run the application :
 
- * To run the application :
-
-	  ```
-	  docker-compose up
-
-	  ```
+```
+$ docker-compose up
+```
 
 ## How to test the application ? 
 
@@ -73,26 +74,25 @@ Navigate to http://localhost:9411 to view Zipkin UI.
 
 ## Zipkin Output: 
 
-#### Client 1 Logs
+#### client1 app logs
 ```
 2017-10-29 20:26:37.497  INFO [zipkin-client-1,9866ef627387f89d,9866ef627387f89d,true] 5025 --- [nio-8081-exec-8] com.barath.app.AppController             : Invoke Client 1 
 ```
 
-#### Client 2 Logs 
+#### client2 app logs
 
 ```
 2017-10-29 20:26:37.521  INFO [zipkin-client-2,9866ef627387f89d,353315ba5919a55d,true] 5029 --- [io-8082-exec-10] com.barath.app.AppController             : Welcome Home from Client 2 is called 
 ```
 
-#### In zipkin UI : 
+#### In zipkin ui : 
 
 ![Zipkin OUTPUT UI ](images/output.png)
 
 ## How to rebuild the project after the changes? 
 
 ```
-  docker-compose build
-
+$ docker-compose build
 ```
 
 
